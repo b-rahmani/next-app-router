@@ -1,8 +1,18 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Vazirmatn } from "next/font/google";
+// import local from 'next/font/local';
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Vazirmatn({ subsets: ["arabic"] });
+// const iran = local({
+//   src: [
+//     {
+//       path: '../../public/fonts/iranyekan.woff2',
+//       weight: '800',
+//     },
+//   ],
+//   variable: '--iran',
+// });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,9 +24,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} `}>{children}</body>
     </html>
   );
 }
