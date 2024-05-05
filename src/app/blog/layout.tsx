@@ -1,4 +1,7 @@
-const Layout = ({ children }) => {
+import { Props } from "@/types/types"
+
+const Layout = ({ children }:Props) => {
+
   return (
     <div className="flex justify-between items-center max-w-6xl mx-auto">
       <div>
